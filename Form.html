@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Submission Form</h1>
+  
+    <form action="" method = "get">
+      <fieldset>
+        <legend>Please Register Here</legend>
+        <label for="first-name">First Name:</label>
+        <input id="first-name" type="text" name="firstname"><br>
+        <label for="last-name">Last Name:</label>
+        <input id="last-name" type="text" name="lastname"><br>
+        <label for="user-name">User Name:</label>
+        <input id="user-name" type="text" name="username"><br>
+        <label for="password">Password:</label>
+        <input id="password" type="text" name="password"><br><br>
+        
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="gender" value="male"> Male <input type="radio" name="gender" value="female"> Female<br><br>
+        
+        <label for="fevorite-shows">Favorite TV Genres:</label><br>
+        <input type="checkbox" name="genre1" value="anime"> Anime<br>
+        <input type="checkbox" name="genre2" value="drama"> Drama<br>
+        <input type="checkbox" name="genre3" value="sitcom"> Sitcom<br>
+        <input type="checkbox" name="genre4" value="reality"> Reality TV<br>
+        <input type="checkbox" name="genre5" value="documentary"> Documentary<br>
+        <input type="checkbox" name="genre6" value="gameshow"> Game Show<br>
+        <input type="checkbox" name="genre7" value="thriller"> Thriller/Horror<br><br>
+        
+        <label for="age">Your Age:</label><br>
+        <select> 
+          <option value="under12">Under 12</option>
+          <option value="12-17">12-17</option>
+          <option value="18-24">18-24</option>
+          <option value="25-34">25-34</option>
+          <option value="35-44">35-44</option>
+          <option value="45-54">45-54</option>
+          <option value="55-64">55-64</option>
+          <option value="65+">65+</option>
+        </select><br><br>
+        
+        <label for="picture">Upload Your Picture:</label><br>
+        <form action="/action_page.php">
+          <input type="file" name="myFile"><br><br>
+        </form>
+  
+      </fieldset><br>
+      <input type="submit" value="Submit">
+    </form>
+
+   
+  </body>
+</html>
+
+
+
