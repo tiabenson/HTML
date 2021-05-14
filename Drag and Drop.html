@@ -1,7 +1,10 @@
+<!--Tia Deloach Benson-->
+
 <!DOCTYPE html>
 <html>
+    <!--format empty circles-->
     <style>
-    #circle1, #circle2, #circle3, #circle4, #circle5, #circle6{
+    #circle1, #circle2, #circle3, #circle4, #circle5, #circle6{ 
     float: left;
     width: 70px;
     height: 70px;
@@ -9,7 +12,7 @@
     border-radius: 50%;
     border: 3px solid rgb(0, 0, 0);
     line-height: 65px;
-    } 
+    }  
     </style>
 
     <script>
@@ -31,12 +34,13 @@
             event.preventDefault();
             var color = event.dataTransfer.getData("text");
 
-            if(event.target.nodeName !== "IMG")
+            if(event.target.nodeName !== "IMG") //don't allow dropping on other images
                 event.target.appendChild(document.getElementById(color));
 
-            var dest = event.target.id;
+            var dest = event.target.id; //save where the colored circle was dropped
 
-            if(color == "green" && dest == "circle1")
+            //check if colored circle was placed in correct spot
+            if(color == "green" && dest == "circle1") 
                 greencheck = 1;
  
             else if(color == "blue" && dest == "circle2")
@@ -47,6 +51,7 @@
 
             else
             {
+                //if circle wasn't placed in the correct spot, save that information
                 if(color == "red")
                 {
                     redcheck = 0;
@@ -63,6 +68,7 @@
                 }
             }
 
+            //if all circles are placed correctly, display hidden message
             if(redcheck == 1 && greencheck == 1 && bluecheck == 1)   
                 document.getElementById("success").innerHTML = "<span style='font-size:30px; color: black''>You did it!</span>";
                 
@@ -79,7 +85,7 @@
             <div id="circle2" ondrop="drop(event, this)" ondragover="allow(event)" ></div>
             <div id="circle3" ondrop="drop(event, this)" ondragover="allow(event)"></div>
             
-            <br style="clear: both;"> 
+            <!--add horizontal space-->
             <br style="clear: both;"> 
             <br style="clear: both;"> 
 
@@ -95,6 +101,7 @@
              <img src="https://149361292.v2.pressablecdn.com/wp-content/uploads/blue-circle.png" draggable="true" ondragstart="drag(event)" id="blue" width="70" alt="blue circle" />
              </div>
 
+             <!--hidden message-->
              <div id="success"></div>
 
           </div>
