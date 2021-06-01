@@ -16,6 +16,10 @@ A website based off the television show *Grown-ish* using HTML and CSS. Includes
 A file that utilizes JavaScript alone and with HTML tags. Uses closure to wrap HTML tags.
 
 ## Drag and Drop.html
-A game where you have to place the colored circles in the correct order. Drag the circles in order to move them. A hidden message will be displayed once the circles are placed correctly. Includes HTML, CSS, and Javascript. Implements the drag-and-drop feature in HTML. 
+A game where you have to place the colored circles in the correct order. Drag the circles in order to move them. A hidden message will be displayed once the circles are placed correctly. Includes HTML, CSS, and JavaScript. Implements the drag-and-drop feature in HTML. 
 
 <img src="https://github.com/tiabenson/HTML-JavaScript/blob/main/drag_and_drop.png" width="390" height="390">
+
+## compass.html
+Allows users to rotate a compass in both clockwise and counterclockwise directions. Uses two buttons to rotate the compass. Includes HTML, CSS, and JavaScript. 
+
