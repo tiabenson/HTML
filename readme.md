@@ -5,6 +5,9 @@ This repository is a collection of all HTML and JavaScript projects I have done.
 **How to Run Files:** Download the HTML files and open them in your preferred browser.
 
 
+## Planet Calculator.html
+A calculator that finds your age on different planets based on your birthdate. Uses HTML, JavaScript, and CSS.
+
 ## Form.html
 A submission form that was created using HTML.  Includes a legend, radio buttons, checkboxes, text boxes, drop-down menus, and an upload file button. 
 ![](https://github.com/tiabenson/HTML-JavaScript/blob/main/form.png)
