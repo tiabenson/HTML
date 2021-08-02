@@ -14,6 +14,11 @@ A calculator that finds your age on different planets based on your birthdate. U
 A submission form that was created using HTML.  Includes a legend, radio buttons, checkboxes, text boxes, drop-down menus, and an upload file button. 
 ![](https://github.com/tiabenson/HTML-JavaScript/blob/main/form.png)
 
+## Moon Phases.html
+A matching game where you try to match the correct moon phase picture with its name. Includes HTML, CSS, and JavaScript. 
+
+<img src="https://github.com/tiabenson/HTML-JavaScript/blob/main/moon_phases.png" height="400">
+
 ## Grown-ish website.html
 A website based off the television show *Grown-ish* using HTML and CSS. Includes an internal CSS style, images, a table, and an image button.
 
@@ -30,7 +35,3 @@ Allows users to rotate a compass in both clockwise and counterclockwise directio
 
 <img src="https://github.com/tiabenson/HTML-JavaScript/blob/main/compass.png" width="350">
 
-## Moon Phases.html
-A matching game where you try to match the correct moon phase picture with its name.
-
-<img src="https://github.com/tiabenson/HTML-JavaScript/blob/main/Moon Phase.png" width="350">
