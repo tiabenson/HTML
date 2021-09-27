@@ -17,7 +17,7 @@ A submission form that was created using HTML.  Includes a legend, radio buttons
 ## Moon Phases.html
 A matching game where you try to match the correct moon phase picture with its name. Includes HTML, CSS, and JavaScript. 
 
-<img src="https://github.com/tiabenson/HTML-JavaScript/blob/main/moon_phases.png" height="400">
+<img src="https://github.com/tiabenson/HTML-JavaScript/blob/main/moon_phases.gif" height="430">
 
 ## Grown-ish website.html
 A website based off the television show *Grown-ish* using HTML and CSS. Includes an internal CSS style, images, a table, and an image button.
