@@ -1,8 +1,6 @@
 # HTML-JavaScript
 
-This repository is a collection of all HTML and JavaScript projects I have done.  
-
-**How to Run Files:** Download the HTML files and open them in your preferred browser.
+This repository is a collection of all HTML/JavaScript/CSS projects I have done.  
 
 
 ## Planet Calculator.html
