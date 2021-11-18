@@ -1,0 +1,110 @@
+<!--Tia Deloach Benson-->
+
+<!DOCTYPE html>
+<html>
+    <!--format empty circles-->
+    <style>
+    #circle1, #circle2, #circle3, #circle4, #circle5, #circle6{ 
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 0, 0);
+    line-height: 65px;
+    }  
+    </style>
+
+    <script>
+        var redcheck = 0;
+        var bluecheck = 0;
+        var greencheck = 0;
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }   
+
+        function allow(event) {
+            event.preventDefault();
+        }
+
+        function drop(event, target) {
+            document.getElementById("success").innerHTML = "";
+
+            event.preventDefault();
+            var color = event.dataTransfer.getData("text");
+
+            if(event.target.nodeName !== "IMG") //don't allow dropping on other images
+                event.target.appendChild(document.getElementById(color));
+
+            var dest = event.target.id; //save where the colored circle was dropped
+
+            //check if colored circle was placed in correct spot
+            if(color == "green" && dest == "circle1") 
+                greencheck = 1;
+ 
+            else if(color == "blue" && dest == "circle2")
+                bluecheck = 1;
+                
+            else if(color == "red" && dest == "circle3")
+                redcheck = 1;
+
+            else
+            {
+                //if circle wasn't placed in the correct spot, save that information
+                if(color == "red")
+                {
+                    redcheck = 0;
+                }
+
+                else if(color == "blue")
+                {
+                    bluecheck = 0;
+                }
+
+                else if(color == "green")
+                {
+                    greencheck = 0;
+                }
+            }
+
+            //if all circles are placed correctly, display hidden message
+            if(redcheck == 1 && greencheck == 1 && bluecheck == 1)   
+                document.getElementById("success").innerHTML = "<span style='font-size:30px; color: black''>You did it!</span>";
+                
+        }
+
+    </script>
+
+    <body style="background-color:#ffffff;"">
+        <h1 style="color:black">
+            Tia's Task
+        </h1>
+
+            <div id="circle1" ondrop="drop(event, this)" ondragover="allow(event)" ></div>
+            <div id="circle2" ondrop="drop(event, this)" ondragover="allow(event)" ></div>
+            <div id="circle3" ondrop="drop(event, this)" ondragover="allow(event)"></div>
+            
+            <!--add horizontal space-->
+            <br style="clear: both;"> 
+            <br style="clear: both;"> 
+
+            <div id="circle4" ondrop="drop(event, this)" ondragover="allow(event)">
+                <img src="https://cdn-0.emojis.wiki/emoji-pics/twitter/red-circle-twitter.png" draggable="true" ondragstart="drag(event)" id="red" width="70" height="70" alt="red circle" />
+            </div>
+        
+            <div id="circle5" ondrop="drop(event, this)" ondragover="allow(event)">
+                <img src="https://www.freeiconspng.com/uploads/green-circle-png-15.png" draggable="true" ondragstart="drag(event)" id="green" width="70" alt="green circle" />
+             </div>
+             
+             <div id="circle6" ondrop="drop(event, this)" ondragover="allow(event)">
+             <img src="https://149361292.v2.pressablecdn.com/wp-content/uploads/blue-circle.png" draggable="true" ondragstart="drag(event)" id="blue" width="70" alt="blue circle" />
+             </div>
+
+             <!--hidden message-->
+             <div id="success"></div>
+
+          </div>
+    </body>
+
+</html>
