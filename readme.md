@@ -36,3 +36,5 @@ Allows users to rotate a compass in both clockwise and counterclockwise directio
 ## scale.html
 Drag numbers on the correct side of the scale. The number should be dragged to the number that it's rounded to. Implements drag and drop features.
 
+<img src="https://github.com/tiabenson/HTML-JavaScript-CSS/blob/main/images/scale.gif">
+
