@@ -1,0 +1,208 @@
+<!--Tia Benson-->
+<!DOCTYPE html>
+
+<html>
+
+<style>
+    #scale_drop1, #scale_drop2 {
+        width: 160px;
+        height: 200px;
+        position: absolute;
+    }
+
+    #text {
+        position: absolute; 
+        left: 950px;
+        top: 510px;
+        font-family: Arial, Helvetica, sans-serif; 
+        font-weight: bold;
+        color: rgb(11, 199, 11); 
+        font-size:xx-large;
+        display: none;
+    }
+
+    #drag_num {
+        position: absolute; 
+        overflow: auto; 
+        left: 648px; 
+        top: 145px;
+    }
+
+    body{
+        background-image: url("https://static.wixstatic.com/media/4cc70a_e95b39811e5548c7a7ab39afa6236e90~mv2.png");
+        background-size: 1351px 729px; 
+        background-repeat: no-repeat;
+    }
+
+</style>
+
+<script>
+    var count = 0;
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev, t) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var dest = event.target.id;
+
+        if(count == 0)  //15 drag --- 10,20
+        {
+            if(dest == "scale_drop1")   //10, wrong
+            {
+                document.getElementById("drag_num").style.left = "88px";
+                document.getElementById("drag_num").style.top = "-235px";
+            }
+
+            else    //20, correct
+            {
+                document.getElementById("scale").src = "https://static.wixstatic.com/media/4cc70a_07ee9f55ac1d4fa284a6f1149a3e4eee~mv2.png";
+
+                document.getElementById(data).style.left = "40px";
+                document.getElementById(data).style.top = "90px";
+                document.getElementById("text").style.display = "inline";
+
+                count++;
+
+                setTimeout(function() { 
+                    document.getElementById("drag_num").src = "";
+                    document.getElementById("drag_num").style.left = "-100px";
+                    document.getElementById("drag_num").style.top = "-230px";
+                    document.getElementById("drag_num").src = "https://static.wixstatic.com/media/4cc70a_e4acdd645e2b4f5b8dbdf26a1565984d~mv2.png";
+
+                    document.getElementById("scale").src = "https://static.wixstatic.com/media/4cc70a_7b10d64f51214642ad49cb4579b2b9a4~mv2.png";
+                    document.getElementById("low_num").src = "https://static.wixstatic.com/media/4cc70a_8ed3554aa5dc4ae8aaef2cd18a1c6705~mv2.png";
+                    document.getElementById("high_num").src = "https://static.wixstatic.com/media/4cc70a_78f02485f81549bd834c1a4289bdc2d6~mv2.png";
+                    document.getElementById("text").style.display = "none";
+
+                }, 2000);
+            }
+        }
+
+        else if(count == 1)  //78 drag --- 70, 80
+        {
+            if(dest == "scale_drop1")   //70, wrong
+            {
+                document.getElementById("drag_num").style.left = "85px";
+                document.getElementById("drag_num").style.top = "-230px";
+            }
+
+            else    //80, correct
+            {
+                document.getElementById("scale").src = "https://static.wixstatic.com/media/4cc70a_07ee9f55ac1d4fa284a6f1149a3e4eee~mv2.png";
+
+                document.getElementById(data).style.left = "40px";
+                document.getElementById(data).style.top = "90px";
+
+                document.getElementById("text").style.display = "inline";
+
+                count++;
+
+                setTimeout(function() { 
+                    document.getElementById("drag_num").src = "";
+                    document.getElementById("drag_num").style.left = "-109px";
+                    document.getElementById("drag_num").style.top = "-235px";
+                    document.getElementById("drag_num").src = "https://static.wixstatic.com/media/4cc70a_0ebdf49cb00c41579b317fe783bf5bfd~mv2.png";
+
+                    document.getElementById("scale").src = "https://static.wixstatic.com/media/4cc70a_7b10d64f51214642ad49cb4579b2b9a4~mv2.png";
+                    document.getElementById("low_num").src = "https://static.wixstatic.com/media/4cc70a_88d44795482f482695ac7d060f3fdfff~mv2.png";
+                    document.getElementById("high_num").src = "https://static.wixstatic.com/media/4cc70a_fb1959837860465fb0a33f40c53b1a82~mv2.png";
+
+                    document.getElementById("text").style.display = "none";
+
+                }, 2000);
+            }
+        }
+
+        else if(count == 2)  //112 drag --- 110, 120
+        {
+            if(dest == "scale_drop1")   //110, correct
+            {
+                document.getElementById("scale").src = "https://static.wixstatic.com/media/4cc70a_1b5b6ba32ca2460ab2683ca023ff94e4~mv2.png";
+                document.getElementById(data).style.left = "35px";
+                document.getElementById(data).style.top = "90px";
+
+                document.getElementById("text").style.display = "inline";
+
+                count++;
+                
+                setTimeout(function() { 
+                    document.getElementById("drag_num").src = "";
+                    document.getElementById("drag_num").style.left = "68px";
+                    document.getElementById("drag_num").style.top = "-235px";
+                    document.getElementById("drag_num").src = "https://static.wixstatic.com/media/4cc70a_730929de3725401cb9a33ad2b4689573~mv2.png";
+
+                    document.getElementById("scale").src = "https://static.wixstatic.com/media/4cc70a_7b10d64f51214642ad49cb4579b2b9a4~mv2.png";
+                    document.getElementById("low_num").src = "https://static.wixstatic.com/media/4cc70a_e8f38181138141118c730908551e705c~mv2.png";
+                    document.getElementById("high_num").src = "https://static.wixstatic.com/media/4cc70a_b78f7143994a45f780301f2ecd3003b1~mv2.png";
+
+                    document.getElementById("text").style.display = "none";
+
+                }, 2000);
+
+            }
+
+            else    //120, incorrect
+            {
+                document.getElementById("drag_num").style.left = "-109px";
+                document.getElementById("drag_num").style.top = "-235px";
+            }
+        }
+
+        else if(count == 3)  //435 drag --- 400, 500
+        {
+            if(dest == "scale_drop1")   //400, correct
+            {
+                document.getElementById("scale").src = "https://static.wixstatic.com/media/4cc70a_1b5b6ba32ca2460ab2683ca023ff94e4~mv2.png";
+                
+                document.getElementById(data).style.left = "20px";
+                document.getElementById(data).style.top = "90px";
+
+                document.getElementById("text").style.display = "inline";
+
+                count++;
+
+                setTimeout(function() { 
+                    document.getElementById("text").style.display = "none";
+                    window.parent.postMessage("done", "*");
+                    alert("Good job!");
+                    
+                }, 2000);
+                
+                
+            }
+
+            else    //500, incorrect
+            {
+                document.getElementById("drag_num").style.left = "-118px";
+                document.getElementById("drag_num").style.top = "-235px";
+            }
+        }
+
+        ev.target.appendChild(document.getElementById(data));
+
+    }
+</script>
+
+<body>
+
+    <img id="scale" src="https://static.wixstatic.com/media/4cc70a_7b10d64f51214642ad49cb4579b2b9a4~mv2.png" style="position: absolute; left: 575px; top: 300px; height: 360px">
+    <img id="drag_num" src ="https://static.wixstatic.com/media/4cc70a_afb5b9ba6f984b55bb9fe4bd7e91d2ab~mv2.png" draggable="true" ondragstart="drag(event)" height="105px">
+
+    <div id="scale_drop1" style="left: 560px; top: 380px" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+    <div id= "scale_drop2" style="left: 745px; top: 380px" ondrop="drop(event, this)" ondragover="allowDrop(event)"></div>
+
+    <img id="low_num" src = "https://static.wixstatic.com/media/4cc70a_2e1b13855e8a40ca8a58bcb229278111~mv2.png" height="105px" draggable="false" style="position: absolute; left: 510px; top: 585px;">
+    <img id="high_num" src = "https://static.wixstatic.com/media/4cc70a_1a1475de189346079fee3488f7d5af6e~mv2.png" height="105px" draggable="false" style="position: absolute; left: 860px; top: 585px">
+
+    <div id="text">Correct!</div>
+
+</body>
+  
+</html>
